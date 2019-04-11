@@ -1,0 +1,4 @@
+Server
+A server-based service that offers a fully specified API for the creation and manipulation of graphic components. The service should provide the capabilities of a drawing library and mimic a typical drawing application such as Inkscape5. It is possible to draw different graphic shapes on a canvas and interact with these components (e.g., resize, recolour). Users should also be able to define custom shapes of their own to extend the shapes library. 
+Webclient (Client)
+A client that runs in a web browser and makes calls to the service API in order to interact with the service. The client’s main task is to handle user input and render the service output.
