@@ -1,0 +1,31 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Graphic Editor Case,Chrome 71.0.3578.98,,2019-01-13 22:22:47,2019-01-13 22:23:02,"15,423s",PASSED
+,,,,,,
+Test Cases/CreateShape,Chrome 71.0.3578.98,,2019-01-13 22:22:47,2019-01-13 22:23:02,"14,822s",PASSED
+"openBrowser("""")",Chrome 71.0.3578.98,,2019-01-13 22:22:48,2019-01-13 22:22:53,"4,640s",PASSED
+"navigateToUrl(""http://localhost:8080/circle"")",Chrome 71.0.3578.98,,2019-01-13 22:22:53,2019-01-13 22:22:55,"1,710s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/select_Circle (1)""), ""Text"", true)",Chrome 71.0.3578.98,,2019-01-13 22:22:55,2019-01-13 22:22:55,"0,533s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/form_Text (1)""))",Chrome 71.0.3578.98,,2019-01-13 22:22:55,2019-01-13 22:22:55,"0,133s",PASSED
+"setText(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_X_x (1)""), ""100"")",Chrome 71.0.3578.98,,2019-01-13 22:22:55,2019-01-13 22:22:55,"0,257s",PASSED
+"setText(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_Y_y (1)""), ""100"")",Chrome 71.0.3578.98,,2019-01-13 22:22:55,2019-01-13 22:22:56,"0,139s",PASSED
+"setText(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_Text_text (1)""), ""sdfdsf"")",Chrome 71.0.3578.98,,2019-01-13 22:22:56,2019-01-13 22:22:56,"0,155s",PASSED
+"setText(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_Color_color (1)""), ""red"")",Chrome 71.0.3578.98,,2019-01-13 22:22:56,2019-01-13 22:22:56,"0,142s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input (1)""), STOP_ON_FAILURE)",Chrome 71.0.3578.98,,2019-01-13 22:22:56,2019-01-13 22:22:56,"0,269s",PASSED
+"verifyElementPresent(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/li_1 (1)""), 5)",Chrome 71.0.3578.98,,2019-01-13 22:22:56,2019-01-13 22:22:56,"0,068s",PASSED
+"setText(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_ID_id (1)""), ""3"")",Chrome 71.0.3578.98,,2019-01-13 22:22:56,2019-01-13 22:22:56,"0,143s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_1 (1)""))",Chrome 71.0.3578.98,,2019-01-13 22:22:56,2019-01-13 22:22:57,"0,261s",PASSED
+verifyAlertPresent(5),Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:57,"0,041s",PASSED
+acceptAlert(),Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:57,"0,052s",PASSED
+acceptAlert(),Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:57,"0,041s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/button_Layer2 (1)""))",Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:57,"0,269s",PASSED
+"verifyElementNotPresent(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/li_1 (1)""), 5)",Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:57,"0,148s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/button_Layer3 (1)""))",Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:57,"0,227s",PASSED
+"verifyElementNotPresent(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/li_1 (1)""), 5)",Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:57,"0,032s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/button_All (1)""))",Chrome 71.0.3578.98,,2019-01-13 22:22:57,2019-01-13 22:22:58,"0,236s",PASSED
+"verifyElementPresent(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/li_1 (1)""), 5)",Chrome 71.0.3578.98,,2019-01-13 22:22:58,2019-01-13 22:22:58,"0,032s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/button_Layer1""))",Chrome 71.0.3578.98,,2019-01-13 22:22:58,2019-01-13 22:22:58,"0,204s",PASSED
+"setText(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_ID_id (1)""), ""1"")",Chrome 71.0.3578.98,,2019-01-13 22:22:58,2019-01-13 22:22:58,"0,150s",PASSED
+"click(findTestObject(""Object Repository/canvas/Page_Getting Started Serving Web Co/Page_Getting Started Serving Web Co/input_1 (1)""))",Chrome 71.0.3578.98,,2019-01-13 22:22:58,2019-01-13 22:22:58,"0,243s",PASSED
+"callTestCase(findTestCase(""Create Triangle""), [:], STOP_ON_FAILURE)",Chrome 71.0.3578.98,,2019-01-13 22:22:58,2019-01-13 22:23:01,"2,223s",PASSED
+"callTestCase(findTestCase(""Create Circle""), [:], STOP_ON_FAILURE)",Chrome 71.0.3578.98,,2019-01-13 22:23:01,2019-01-13 22:23:02,"1,529s",PASSED
+"callTestCase(findTestCase(""Move Shape""), [:], STOP_ON_FAILURE)",Chrome 71.0.3578.98,,2019-01-13 22:23:02,2019-01-13 22:23:02,"0,002s",NOT_RUN

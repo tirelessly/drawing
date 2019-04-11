@@ -1,0 +1,621 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <style>
+        .canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <SCRIPT>
+        function show(aval) {
+            console.log(aval)
+            if (aval == "Circle") {
+                circle.style.display='inline-block';
+                circle.style.visibility='visible';
+                text.style.visibility='hidden';
+                quadrangle.style.visibility='hidden';
+                line.style.visibility='hidden';
+                ellipse.style.visibility='hidden';
+                triangle.style.visibility='hidden';
+                star.style.visibility='hidden';
+                ngon.style.visibility='hidden';
+                text.style.display='none';
+                quadrangle.style.display='none';
+                line.style.display='none';
+                ellipse.style.display='none';
+                triangle.style.display='none';
+                star.style.display='none';
+                ngon.style.display='none';
+            } else if(aval == "Text"){
+                text.style.display='inline-block';
+                text.style.visibility='visible';
+                circle.style.visibility='hidden';
+                quadrangle.style.visibility='hidden';
+                line.style.visibility='hidden';
+                ellipse.style.visibility='hidden';
+                triangle.style.visibility='hidden';
+                star.style.visibility='hidden';
+                ngon.style.visibility='hidden';
+                circle.style.display='none';
+                quadrangle.style.display='none';
+                line.style.display='none';
+                ellipse.style.display='none';
+                triangle.style.display='none';
+                star.style.display='none';
+                ngon.style.display='none';
+            } else if(aval == "Quadrangle"){
+                quadrangle.style.display='inline-block';
+                quadrangle.style.visibility='visible';
+                circle.style.visibility='hidden';
+                text.style.visibility='hidden';
+                line.style.visibility='hidden';
+                ellipse.style.visibility='hidden';
+                triangle.style.visibility='hidden';
+                star.style.visibility='hidden';
+                ngon.style.visibility='hidden';
+                circle.style.display='none';
+                text.style.display='none';
+                line.style.display='none';
+                ellipse.style.display='none';
+                triangle.style.display='none';
+                star.style.display='none';
+                ngon.style.display='none';
+            } else if(aval == "Line"){
+                line.style.display='inline-block';
+                line.style.visibility='visible';
+                circle.style.visibility='hidden';
+                text.style.visibility='hidden';
+                quadrangle.style.visibility='hidden';
+                ellipse.style.visibility='hidden';
+                triangle.style.visibility='hidden';
+                star.style.visibility='hidden';
+                ngon.style.visibility='hidden';
+                circle.style.display='none';
+                text.style.display='none';
+                quadrangle.style.display='none';
+                ellipse.style.display='none';
+                triangle.style.display='none';
+                star.style.display='none';
+                ngon.style.display='none';
+            } else if(aval == "Ellipse"){
+                ellipse.style.display='inline-block';
+                ellipse.style.visibility='visible';
+                circle.style.visibility='hidden';
+                text.style.visibility='hidden';
+                quadrangle.style.visibility='hidden';
+                line.style.visibility='hidden';
+                triangle.style.visibility='hidden';
+                star.style.visibility='hidden';
+                ngon.style.visibility='hidden';
+                circle.style.display='none';
+                text.style.display='none';
+                quadrangle.style.display='none';
+                line.style.display='none';
+                triangle.style.display='none';
+                star.style.display='none';
+                ngon.style.display='none';
+            } else if(aval == "Triangle"){
+                triangle.style.display='inline-block';
+                triangle.style.visibility='visible';
+                circle.style.visibility='hidden';
+                text.style.visibility='hidden';
+                quadrangle.style.visibility='hidden';
+                line.style.visibility='hidden';
+                ellipse.style.visibility='hidden';
+                star.style.visibility='hidden';
+                ngon.style.visibility='hidden';
+                circle.style.display='none';
+                text.style.display='none';
+                quadrangle.style.display='none';
+                line.style.display='none';
+                ellipse.style.display='none';
+                star.style.display='none';
+                ngon.style.display='none';
+            } else if(aval == "Star"){
+                star.style.display='inline-block';
+                star.style.visibility='visible';
+                circle.style.visibility='hidden';
+                text.style.visibility='hidden';
+                quadrangle.style.visibility='hidden';
+                line.style.visibility='hidden';
+                ellipse.style.visibility='hidden';
+                triangle.style.visibility='hidden';
+                ngon.style.visibility='hidden';
+                circle.style.display='none';
+                text.style.display='none';
+                quadrangle.style.display='none';
+                line.style.display='none';
+                ellipse.style.display='none';
+                triangle.style.display='none';
+                ngon.style.display='none';
+            } else if(aval == "Ngon"){
+                ngon.style.display='inline-block';
+                ngon.style.visibility='visible';
+                circle.style.visibility='hidden';
+                text.style.visibility='hidden';
+                quadrangle.style.visibility='hidden';
+                line.style.visibility='hidden';
+                ellipse.style.visibility='hidden';
+                triangle.style.visibility='hidden';
+                star.style.visibility='hidden';
+                circle.style.display='none';
+                text.style.display='none';
+                quadrangle.style.display='none';
+                line.style.display='none';
+                ellipse.style.display='none';
+                triangle.style.display='none';
+                star.style.display='none';
+            }
+            else{
+                circle.style.display='none';
+                circle.style.visibility='hidden';
+                text.style.display='none';
+                text.style.visibility='hidden';
+                quadrangle.style.display='none';
+                quadrangle.style.visibility='hidden';
+                line.style.display='none';
+                line.style.visibility='hidden';
+                ellipse.style.display='none';
+                ellipse.style.visibility='hidden';
+                triangle.style.display='none';
+                triangle.style.visibility='hidden';
+                star.style.display='none';
+                star.style.visibility='hidden';
+                ngon.style.display='none';
+                ngon.style.visibility='hidden';
+            }
+        }
+    </SCRIPT>
+</head>
+<body bgcolor="#808080">
+<div class="container">
+    <div class="row">
+        <div class="col canvas">
+            <form action="/chooseLayer" method="get">
+                <button name="id" value="0">Layer1</button>
+                <button name="id" value="1">Layer2</button>
+                <button name="id" value="2">Layer3</button>
+                <button name="id" value="all">All</button>
+            </form>
+            <svg width="700" height="1000" style="background-color: white;">
+                <div th:remove="tag" th:utext="${htmlCode}"></div>
+            </svg>
+        </div>
+        <div class="col">
+            <div class="col-12 pt-4">
+                <label>Pick a shape to create!</label>
+                <select name="Fruit" onchange="show(this.options[this.selectedIndex].value)">
+                    <option selected="selected">Select...</option>
+                    <option value="Circle">Circle</option>
+                    <option value="Text">Text</option>
+                    <option value="Quadrangle">Quadrangle</option>
+                    <option value="Ellipse">Ellipse</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Line">Line</option>
+                    <option value="Star">Star</option>
+                    <option value="Ngon">Ngon</option>
+                </select>
+
+
+                <form id="circle" action="/circle" method="get" style="display: none">
+
+                    <h3>Circle</h3>
+
+                    <div class="form-group">
+                        <label>X-Coordinate: </label>
+                        <input type="text" name="xCoordinate"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Y-Coordinate: </label>
+                        <input type="text" name="yCoordinate"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Radius: </label>
+                        <input type="text" name="r"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div th:remove="tag" th:if="${circleError != null} ">
+                        <div th:utext="${circleError}">
+
+                        </div>
+                        </div>
+                </form>
+
+                <form id="text" action="/text" method="get" style="display: none">
+                    <h3>Text</h3>
+                    <div class="form-group">
+                        <label>X: </label>
+                        <input type="text" name="x"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Y: </label>
+                        <input type="text" name="y"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Text: </label>
+                        <input type="text" name="text"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+
+                    <div th:remove="tag" th:if="${textError != null} ">
+                        <div th:utext="${textError}"></div>
+                    </div>
+                </form>
+
+                <form id="quadrangle" action="/quadrangle" method="get" style="display: none">
+                    <h3>Quadrangle</h3>
+                    <div class="form-group">
+                        <label>X: </label>
+                        <input type="text" name="x"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Y: </label>
+                        <input type="text" name="y"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Width</label>
+                        <input type="text" name="width"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Height</label>
+                        <input type="text" name="height"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div th:remove="tag" th:if="${quadrangleError != null} ">
+                        <div th:utext="${quadrangleError}"></div>
+                    </div>
+                </form>
+
+
+                <form id="ellipse" action="/ellipse" method="get" style="display: none">
+                    <h3>Ellipse</h3>
+                    <div class="form-group">
+                        <label>X: </label>
+                        <input type="text" name="x"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Y: </label>
+                        <input type="text" name="y"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>RX: </label>
+                        <input type="text" name="rx"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>RY: </label>
+                        <input type="text" name="ry"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div th:remove="tag" th:if="${ellipseError != null} ">
+                        <div th:utext="${ellipseError}"></div>
+                    </div>
+                </form>
+
+
+                <form id="triangle" action="/triangle" method="get" style="display: none">
+                    <h3>Triangle</h3>
+                    <div class="form-group">
+                        <label>X1: </label>
+                        <input type="text" name="x1">
+                    </div>
+                    <div class="form-group">
+                        <label>Y1:</label>
+                        <input type="text" name="y1"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X2: </label>
+                        <input type="text" name="x2">
+                    </div>
+                    <div class="form-group">
+                        <label>Y2: </label>
+                        <input type="text" name="y2"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X3: </label>
+                        <input type="text" name="x3">
+                    </div>
+                    <div class="form-group">
+                        <label>Y3: </label>
+                        <input type="text" name="y3"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color</label>
+                        <input type="text" name="color"> <br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div th:remove="tag" th:if="${triangleError != null} ">
+                        <div th:utext="${triangleError}"></div>
+                    </div>
+                </form>
+
+
+
+                <form id="line" action="/line" method="get" style="display: none">
+                    <h3>Line</h3>
+                    <div class="form-group">
+                        <label>X: </label>
+                        <input type="text" name="x1">
+                    </div>
+                    <div class="form-group">
+                        <label>Y: </label>
+                        <input type="text" name="y1"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X2: </label>
+                        <input type="text" name="x2">
+                    </div>
+                    <div class="form-group">
+                        <label>Y2: </label>
+                        <input type="text" name="y2"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"> <br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div th:remove="tag" th:if="${lineError != null} ">
+                        <div th:utext="${lineError}"></div>
+                    </div>
+                </form>
+
+
+                <form id="star" action="/star" method="get" style="display: none">
+                    <h3>Star</h3>
+                    <div class="form-group">
+                        <label>X: </label>
+                        <input type="text" name="x1">
+                    </div>
+                    <div class="form-group">
+                        <label>Y: </label>
+                        <input type="text" name="y1"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X2: </label>
+                        <input type="text" name="x2">
+                    </div>
+                    <div class="form-group">
+                        <label>Y2: </label>
+                        <input type="text" name="y2"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X3: </label>
+                        <input type="text" name="x3">
+                    </div>
+                    <div class="form-group">
+                        <label>Y3: </label>
+                        <input type="text" name="y3"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X4: </label>
+                        <input type="text" name="x4">
+                    </div>
+                    <div class="form-group">
+                        <label>Y4: </label>
+                        <input type="text" name="y4"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X5: </label>
+                        <input type="text" name="x5">
+                    </div>
+                    <div class="form-group">
+                        <label>Y5: </label>
+                        <input type="text" name="y5"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"> <br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div th:remove="tag" th:if="${starError != null} ">
+                        <div th:utext="${starError}"></div>
+                    </div>
+                </form>
+
+                <form id="ngon" action="/ngon" method="get" style="display: none">
+                    <h3>Ngon</h3>
+                    <div class="form-group">
+                        <label>X1: </label>
+                        <input type="text" name="x1">
+                    </div>
+                    <div class="form-group">
+                        <label>Y1: </label>
+                        <input type="text" name="y1"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X2: </label>
+                        <input type="text" name="x2">
+                    </div>
+                    <div class="form-group">
+                        <label>Y2: </label>
+                        <input type="text" name="y2"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X3: </label>
+                        <input type="text" name="x3">
+                    </div>
+                    <div class="form-group">
+                        <label>Y3: </label>
+                        <input type="text" name="y3"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X4: </label>
+                        <input type="text" name="x4">
+                    </div>
+                    <div class="form-group">
+                        <label>Y4: </label>
+                        <input type="text" name="y4"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X5: </label>
+                        <input type="text" name="x5">
+                    </div>
+                    <div class="form-group">
+                        <label>Y5: </label>
+                        <input type="text" name="y5"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X6: </label>
+                        <input type="text" name="x6">
+                    </div>
+                    <div class="form-group">
+                        <label>Y6: </label>
+                        <input type="text" name="y6"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X7: </label>
+                        <input type="text" name="x7">
+                    </div>
+                    <div class="form-group">
+                        <label>Y7: </label>
+                        <input type="text" name="y7"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X8: </label>
+                        <input type="text" name="x8">
+                    </div>
+                    <div class="form-group">
+                        <label>Y8: </label>
+                        <input type="text" name="y8"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X9: </label>
+                        <input type="text" name="x9">
+                    </div>
+                    <div class="form-group">
+                        <label>Y9: </label>
+                        <input type="text" name="y9"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>X10: </label>
+                        <input type="text" name="x10">
+                    </div>
+                    <div class="form-group">
+                        <label>Y10: </label>
+                        <input type="text" name="y10"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"> <br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div th:remove="tag" th:if="${ngonError != null} ">
+                        <div th:utext="${ngonError}"></div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-12">
+                <div>
+                    <ul>
+                        <h3>Ids of created Shapes</h3>
+                        <div th:remove="tag" th:utext="${getAllId}">  </div>
+                    </ul>
+                </div>
+                <form action="/delete" method="get" >
+                    <h3>Delete</h3>
+                    <div th:remove="tag" th:if="${deleteError != null} ">
+                        <div th:utext="${deleteError}"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>ID: </label>
+                        <input type="text" name="id"> <br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+
+                <form action="/changeColor" method="get" >
+                    <h3>Change color of Shape</h3>
+                    <div th:remove="tag" th:if="${changeError != null} ">
+                        <div th:utext="${changeError}"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>ID: </label>
+                        <input type="text" name="id"> <br>
+                    </div>
+                    <div class="form-group">
+                        <label>Color: </label>
+                        <input type="text" name="color"> <br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+
+
+                <form action="/move" method="get">
+                    <h3>Move Shape</h3>
+                    <div th:remove="tag" th:if="${moveError != null} ">
+                        <div th:utext="${moveError}"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>ID: </label>
+                        <input type="text" name="id"><br>
+                    </div>
+                    <button type="submit" name="direction" value="left">Left</button>
+                    <button type="submit" name="direction" value="right">Right</button>
+                    <button type="submit" name="direction" value="up">Up</button>
+                    <button type="submit" name="direction" value="down">Down</button>
+                </form>
+
+                <form action="/resize" method="get">
+                    <h3>Scale Shape</h3>
+                    <div class="form-group pt-3">
+                        <label>ID: </label>
+                        <input type="text" name="id"><br>
+                    </div>
+                    <button type="submit" name="direction" value="plus">+</button>
+                    <button type="submit" name="direction" value="minus">-</button>
+                </form>
+                <form action="/getSVG" method="get">
+                    <h3>Download SVG</h3>
+                    <button type="submit">Generate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body><!---->
+</html>
